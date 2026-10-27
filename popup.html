@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Webcam Loop Pedal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header><div class="mark">↻</div><div><h1>Loop Pedal</h1><p>Webcam loop studio</p></div></header>
+    <video id="preview" autoplay muted playsinline></video>
+    <div class="status" id="status">Camera is off</div>
+    <div class="controls">
+      <button id="camera" class="secondary">Start camera</button>
+      <button id="record" disabled>● Record loop</button>
+      <button id="stop" class="secondary" disabled>Stop recording</button>
+    </div>
+    <label for="duration">Loop length <span id="durationLabel">5 sec</span></label>
+    <input id="duration" type="range" min="2" max="15" value="5">
+    <section id="clipSection" hidden>
+      <h2>Your loop</h2>
+      <video id="clip" controls loop playsinline></video>
+      <div class="controls">
+        <button id="play">▶ Play loop</button>
+        <button id="download" class="secondary">↓ Download WebM</button>
+      </div>
+      <p class="hint">The downloaded video loops in players that support looping. The extension does not replace your camera inside Meet or other calls.</p>
+    </section>
+    <footer>Camera access stays on this device. Nothing is uploaded.</footer>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>
