@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Webcam Loop Pedal",
+  "version": "1.0.0",
+  "description": "Record short webcam loops, play them hands-free, and download your clips.",
+  "permissions": ["storage", "downloads"],
+  "action": {
+    "default_title": "Webcam Loop Pedal",
+    "default_popup": "popup.html"
+  },
+  "icons": {}
+}
